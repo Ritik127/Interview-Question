@@ -1,0 +1,91 @@
+<-----------Automation Testing Framework------------------>
+
+       <-----------------Index------------------->
+
+1. Linear Scripting Framework
+2. Modular Testing Framework
+3. Data-driven Framework 
+4. Keyword-driven Testing Framework
+5. Behaviour-driven Development Testing Framework (BDD)
+
+
+
+<--------------------Cucumber Questions---------------->
+
+            <-----------Index--------------->
+1.Gherkins Keyword
+2.Data Tables
+3.Scenario Outline
+4.use of tags (@ follwed by some text)
+5.Declarative and Imperative way(wrong way) of writing steps in feature file
+6.Cucumber Annotations = { 'Tags' ,'Hooks','Tagged Hooks'(tags+hooks) , 'Execution order of Hooks' , 'Background Keywords'}
+7.WebDriver Manager
+8.Hooks = {'Before' ,'After'}
+9.Page Object Manager
+10. JSON data reader 
+11. cucumber reports plugin
+12. Extend Reports with Screenshot
+13. Run Test From Command Line
+14. Data Driven Testing = { 'Parameterization' ,'Example Keyword' , 'Data Table' , 'Maps in Data Table' }
+15. parameterization ={ 'Excel file' , 'Json' , 'XML' }
+16. Annotate the scenario
+17. cucumber options = { dryRun , features , glue , tags , monochrome , format , strict }
+18.
+|Q1| What are Gherkin Keywords
+
+Ans Gherkin_Keyword[8] ={ feature , Scenario , Given , When , And ,Then , But , Background }
+
+ Background: = put the steps that are repeated in every scenario into the background    || or we can reuse step defination 
+............
+	(Background:
+			Given I navigate to the website
+		Scenario:)
+
+|Q2| What are Data Tables ?
+		  ...........
+Ans Data tables ( Step level || Scenario Level (Scenario outline level) ) used to store the data as a parameter within the steps
+
+|Q3| What is Scenario outline level
+
+Ans inject the information at Scenario Level rather than the step Level , Scenario outline is followed by the Keyword
+	
+	Feature:
+	Scenario Outline : Login Validation
+	.................
+ 	Given:
+	When: I enter "<email>" and "<password>" to login page
+			  .........		.........
+	And: user click on Login Button
+...........................................	
+|	Example:					|
+|	|email		|password|title|	|
+|	|abc@gmail.com	|1245	   |Home|	|
+...........................................
+
+|Q4| what is Tagged Hooks { @Before("@TagName")}
+
+Ans if we have different prequiste for different scenario , and we need different hooks for diferent scenario
+	@first            |           @Before("@First")
+	Scenario:         |		public void afterScenario(){}
+		Given		|
+		When		|
+			
+|Q5| what is common Tagged Hooks
+
+Ans @Before("@First,@Third")
+
+|Q6|What is cucumber options
+
+Ans dryRun =every step mentioned in feature file has corresponding code return in Step Defination file or not.
+
+	Monochrome = console output for the cucumber test are much more readable or not 
+	tags = what tags in feature file should be executed 
+	.....
+	format = report format to use
+	Strict = will fail execution if there are undefined or pending steps
+	feature = path of the feature file 
+	glue = path of the step defination file 
+
+	
+	
+
