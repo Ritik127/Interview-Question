@@ -1,0 +1,84 @@
+<----------------------------------TestNg---------------------------->
+
+<--------Index----------------->
+
+1. Annotation - 
+2. TestNg Report
+3. TestNg Project
+4. TestNg:Assertion 
+5. Parallel execution ={ test methods , test classes ,test suite}
+6. Parameterization = @Parameters ({"val1","val2"}) || <parameter name="val1" value="3"/> <parameter name ="val2" value="4"/>
+7. Data Providers
+8. Retry Failed test in Testng
+9. TestNg.XML
+
+
+
+
+
+
+
+
+<!--------Questions--------------!>
+
+|Q1| What is TestNg Framework?
+
+Ans # automation framework for java
+	# import org.testng.annotations.*; - will use to import the annotation classes
+     # NG stands for [ Next Generation ]
+    # Listener's helps in creating Logs
+# ease of using ['Parallel Execution','grouping' ,'dependence' ,'prioritization' , 'parameterization feature', 'Data-providers' ,'Html reports' ,'Extent Report' , 'Listeners']
+
+|Q2| what is annotation ?
+
+Ans  @Test[5] ={ 'description' , 'priority' ,'dependsOnMethod' , 'enabled', 'groups'}
+
+
+@Test(description= "this test is valid for login functionality") //describe testcse under description 
+@Test (priority =1)                                             //prioritize the order of the test
+@Test(dependsOnMethod ="Login")                                //if one testcase is dependent on other testcase
+@Test (enabled='true')							  //disable the test case
+@Test (groups=" Smoke Suite")					       //grouping the test case 
+
+|Q3| What are Major annotation in TestNg?
+
+Ans Major_Annotation[9]={@BeforeSuite , @BeforeTest , @Beforeclass , @BeforeMethod , @Test, @AfterMethod , @Afterclass,  @AfterTest, @AfterSuite}
+	                   {@BeforeMethod ,  @AfterMethod } == (run after/before every  @test method)
+
+|Q4|In order to execute?
+
+Ans  {convert to testng , TestNg.xml}
+
+|Q5| TestNg.xml
+
+Ans   <suite name="Suite">						                                              // f5 > test-output > index.html
+	<test name="Test" parallel="methods" || parallel="classes" || parallel="tests" thread-count="2" >
+
+<classes>                                *****multiple classes*****
+ <class name ="Googletest.GmailTest"/> ******methods in particular classes*****
+ <class name ="Googletest.MapsTest"/>
+</classes> </test> 
+                       ********multiple suite*********
+<test name ="test2">
+<classes>
+<class name ="#"/>
+</classes>
+</test>
+	</suite> 
+
+|Q6| TestNg:Assertions
+
+Ans  to validate your actual result against your expected results 
+	Assertion[4] ={'assertTrue(condition) ', 'assertFalse(condition) ', 'assertEquals(actual , expected) ', 'assertNotEquals'
+ }
+
+		# assertion is that your test will not execute to the next line of the code,
+ if your assertion failed, it will automatically jump to the next test annotated method
+
+|Q7|
+
+	
+
+
+
+	
