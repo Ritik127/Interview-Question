@@ -1,0 +1,79 @@
+<--------------------------JUnit ( obtain Independency in test Module )------------------------------------->
+
+                        <---------------------Index---------------------------->
+
+1. Relation between the Unit testing & Regression Testing
+2. What is Test Coverage , How much test coverage is efficient or essential?
+3. Relation between the Unit test & Junit
+4. Automation Tool for Unit Testing ?
+5. How will you Describe Junit Annotation (importance or need)  with real life example ( coffee machine ) ?
+6. Junit 4 @Ignore vs Junit 5 @Disabled
+		............................
+7. Difference between Junit 4 Vs Junit 5 annotation ?
+8. Filtering TestCases ?
+
+
+
+
+
+
+
+
+
+|Q1| Relation between the Unit Test & Regression Testing?
+	How Unit test helps to reduce effort in regreession testing?
+		Hence what is unit testing ? 
+			What is TDD?
+
+Ans   * Developer focus on unit testing every chunk of the code they develop.
+	* we know that testing should go parallelly with each passing phase of the SDLC.
+	* Starting from requirement and analysis to design & development till maintenance
+	* Reducing the Effort of Regression testing.
+			
+    UNIT Testing -* testing of small logic of code to verify that the output of the code  is an excepted on the input 
+			  of a satisfying certain condition.
+			* it provide insight into how current code impact future implementation
+
+|Q2|   What is Test Coverage?
+
+Ans	* The percentage of code that is tested by Unit Tests is called Test Coverage.
+	* Having the high test coverage of your code allows you to continue developing a feature
+		without having to perform a lot of manual test.
+
+|Q3|   How much Test coverage is Essential?
+
+Ans   * Efficient Test need not 100% test Coverage or Incorporating automation tests
+	* " according to me unit test for every single path or branch coverage "
+
+      * There is no much hard & Fast rule to how much test coverage is essential,
+	it is all judgemental, the judgemental get better with experience on the application workflow and
+	 historic knowledge of the defects so far.
+
+|Q4|   Relation between the Junit and Unit Test ?
+
+Ans   Framework that is used for writing and executing test case in Java Programming Language.
+	It is one of the best knowing Unit Testing Framework.
+
+|Q5| What are Automation Tool For Unit Testing ?
+
+Ans Unit_Testing = { Junit, Nunit ,Embunit, TestNg, HtmlUnit } 
+
+|Q6| Junit 4 vs Junit 5 annotation
+
+	| Junit 4 annotation  |  Junit 5 Annotation |
+	___________________________________________
+	@RunWith				@RunWith
+	@SuiteClasses Annotation	@SelectClasses
+						@SelectPackages Annotation
+	_______________________________________________					
+	@category				
+	@IncludeCategory		@IncludeTags
+	@ExcludeCategory		@ExcludeTags
+					@Include Packages
+					@Exclude Packages
+					@IncludeClassNamePatterns
+					@ExcludeClassNamePatterns
+	
+
+	
+
